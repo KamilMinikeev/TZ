@@ -1,0 +1,156 @@
+html,
+body {
+	height: 100%;
+	font-family: "CoreSansC-Regular";
+	font-weight: 400;
+	color: #fff;
+	font-size: 16px;
+	line-height: 19px;
+}
+body.no-scroll {
+	overflow: hidden;
+}
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+
+// .main {
+// 	flex: 1 0 auto;
+// }
+// .footer {
+// 	flex: 0 0 auto;
+// }
+
+.container {
+	max-width: 1660px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+button {
+	cursor: pointer;
+	border: none;
+}
+
+a {
+	color: inherit;
+}
+
+.btn-menu {
+	background: none;
+	border-radius: 0;
+	cursor: pointer;
+	display: inline-block;
+	border: 0;
+	padding: 15px;
+}
+.btn-menu__box {
+	display: inline-block;
+	width: 40px;
+	height: 24px;
+}
+.btn-menu__inner {
+	background: #fff;
+	height: 4px;
+	width: 100%;
+	display: block;
+	top: 50%;
+	border-radius: 5px;
+	position: relative;
+	&::before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 4px;
+		background: #fff;
+		left: 0;
+		border-radius: 5px;
+		bottom: -10px;
+	}
+}
+.btn-close {
+	border: none;
+	cursor: pointer;
+	background: none;
+	padding: 0;
+	width: 50px;
+	height: 50px;
+	transition: transform 0.2s linear;
+	transition: opacity 0.2s linear;
+	position: absolute;
+	top: 15px;
+	right: 15px;
+}
+
+.btn-close::before,
+.btn-close::after {
+	content: "";
+	background-color: #fff;
+	height: 40px;
+	width: 3px;
+	position: absolute;
+	border-radius: 10px;
+	top: 8px;
+}
+
+.btn-close::before {
+	transform: rotate(45deg);
+}
+
+.btn-close::after {
+	transform: rotate(-45deg);
+}
+
+.btn-close:hover {
+	transform: scale(1.1);
+}
+
+.btn-close:active {
+	transform: scale(0.9);
+	opacity: 0.8;
+}
+.popup {
+	position: fixed;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.7);
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	pointer-events: none; /*нельзя взаимодействовать с блоком*/
+	visibility: hidden;
+	opacity: 0;
+}
+.popup.is-active {
+	pointer-events: auto;
+	visibility: visible;
+	opacity: 1;
+}
+.popup__wrapper {
+	display: table;
+	width: 100%;
+	height: 100%;
+}
+
+.popup__inner {
+	display: table-cell;
+	//vertical-align: middle;
+	//padding: 50px 0;
+}
+
+.popup__content {
+	background-color: #fff;
+	padding: 110px 20px;
+	max-width: 100%;
+	margin: 0 auto;
+	position: relative;
+	//border-radius: 20px;
+}
