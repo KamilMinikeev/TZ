@@ -1,42 +1,120 @@
-
 $(function () {
-
 
     //apartments-content 
 
     let apartmentsLinks = document.querySelectorAll('.apartments-options__list-link');
-    let apartmentsContent = document.querySelector('.apartments-options__content');
+    let apartmentsContents = document.querySelectorAll('.apartments-options__content');
+    let section = document.querySelector('.section-top');
 
     for (let i = 0; i < apartmentsLinks.length; i++) {
         apartmentsLinks[i].addEventListener('mouseover', function () {
-            apartmentsContent.classList.add('hover');
+
+            for (let j = 0; j < apartmentsContents.length; j++) {
+                if (apartmentsLinks[i].getAttribute('data-link') == apartmentsContents[j].getAttribute('data-option')) {
+                    apartmentsContents[i].classList.add('hover');
+                    section.classList.add('background');
+                }
+            }
         })
         apartmentsLinks[i].addEventListener('mouseout', function () {
-            apartmentsContent.classList.remove('hover');
+            for (let k = 0; k < apartmentsContents.length; k++) {
+                if (apartmentsLinks[i].getAttribute('data-link') == apartmentsContents[k].getAttribute('data-option')) {
+                    apartmentsContents[i].classList.remove('hover');
+                    section.classList.remove('background');
+                }
+            }
         })
     }
 
     //slider
     let arrowRight = document.querySelector('.apartments__slider-btn2');
     let arrowLeft = document.querySelector('.apartments__slider-btn1');
-    let video1 = document.querySelector('.video1');
+    let videos = document.querySelectorAll('.video');
+    let contents = document.querySelectorAll('.apartments-choice__content');
 
-    arrowRight.addEventListener('click', function () {
-        if (arrowRight.classList.contains('active')) {
-            video1.classList.remove('active');
-            video1.classList.add('remove');
-            arrowLeft.classList.add('active');
-            arrowRight.classList.remove('active');
+    arrowRight.addEventListener('click', f1);
+    function f1() {
+        for (let i = 0; i < videos.length; i++) {
+
+            if (videos[i].classList.contains('active')) {
+
+                if (((videos.length - 1) - i) == 1) {
+                    arrowRight.classList.remove('active');
+                }
+
+                if (i != (videos.length - 1)) {
+                    videos[i + 1].classList.add('order');
+                    videos[i + 1].classList.add('active');
+                    videos[i].classList.add('transform');
+                    arrowLeft.classList.add('active');
+                    arrowLeft.disabled = true;
+                    arrowRight.disabled = true;
+                    if (videos[i + 1].classList.contains('order')) {
+                        for (let j = 0; j < contents.length; j++) {
+                            contents[j].classList.remove('active');
+                            if (contents[j].getAttribute('data-content') == videos[i + 1].getAttribute('data-video')) {
+                                contents[j].classList.add('active');
+                            }
+                        }
+                    }
+                    setTimeout(() => {
+                        videos[i].classList.remove('active');
+                        videos[i].classList.remove('order');
+                        videos[i + 1].classList.remove('order');
+                        videos[i].classList.remove('transform');
+                        arrowLeft.disabled = false;
+                        arrowRight.disabled = false;
+                    }, 2000);
+                    return;
+                }
+
+            }
         }
-    })
-    arrowLeft.addEventListener('click', function () {
-        if (arrowLeft.classList.contains('active')) {
-            video1.classList.remove('remove');
-            video1.classList.add('active');
-            arrowLeft.classList.remove('active');
-            arrowRight.classList.add('active');
+    }
+
+    arrowLeft.addEventListener('click', f2);
+
+    function f2() {
+        for (let i = 0; i < videos.length; i++) {
+            if (videos[i].classList.contains('active')) {
+
+
+                if (i == 1) {
+                    arrowLeft.classList.remove('active');
+                }
+
+                if (((videos.length - 1) - i) != (videos.length - 1)) {
+                    videos[i - 1].classList.add('order');
+                    videos[i - 1].classList.add('active');
+                    videos[i].classList.add('transform2');
+                    arrowRight.classList.add('active');
+                    arrowRight.disabled = true;
+                    arrowLeft.disabled = true;
+
+                    if (videos[i - 1].classList.contains('order')) {
+                        for (let j = 0; j < contents.length; j++) {
+                            contents[j].classList.remove('active');
+                            if (contents[j].getAttribute('data-content') == videos[i - 1].getAttribute('data-video')) {
+                                contents[j].classList.add('active');
+                            }
+                        }
+
+                    }
+                    setTimeout(() => {
+                        videos[i].classList.remove('active');
+                        videos[i].classList.remove('order');
+                        videos[i - 1].classList.remove('order');
+                        videos[i].classList.remove('transform2');
+                        arrowRight.disabled = false;
+                        arrowLeft.disabled = false;
+                    }, 2000);
+
+                    return;
+                }
+            }
         }
-    })
+
+    }
 
     //slider-range
 
@@ -60,18 +138,15 @@ $(function () {
             $("#filter3").val(ui.values[0]);
             $("#filter4").val(ui.values[1]);
         }
-
     });
-
-
 
     $("#filter1").val($("#slider-range").slider("values", 0));
     $("#filter2").val($("#slider-range").slider("values", 1));
     $("#filter3").val($("#slider-range2").slider("values", 0));
     $("#filter4").val($("#slider-range2").slider("values", 1));
 
-    $("#filter1").on('change', function () {
 
+    $("#filter1").on('change', function () {
         let value1 = $("#filter1").val();
         let value2 = $("#filter2").val();
 
@@ -84,7 +159,6 @@ $(function () {
 
     })
     $("#filter2").on('change', function () {
-
         let value1 = $("#filter1").val();
         let value2 = $("#filter2").val();
 
@@ -133,26 +207,6 @@ $(function () {
     })
 
 
-
-
-
-
-    //checkbox
-
-    let checkBox = document.querySelectorAll('.filters__checkbox');
-
-    for (let i = 0; i < checkBox.length; i++) {
-        checkBox[i].addEventListener('change', function () {
-            let checkedInput = this;
-            for (let i = 0; i < checkBox.length; i++) {
-                checkBox[i].checked = false;
-            }
-            checkedInput.checked = true;
-
-        })
-    }
-
-
     //select
 
     const selected = document.querySelector('.selected');
@@ -197,6 +251,5 @@ $(function () {
             body.classList.remove('no-scroll');
         }
     })
-
 
 })

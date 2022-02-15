@@ -17,10 +17,16 @@
 
     <section class="section-top">
       <img class="mobile-logo" src="images/logo2-mobile.png" alt="">
-      <video class="video video1 section-top__video" loop="loop" muted="" autoplay="">
+      <video data-video="1" class="video section-top__video active" loop="loop" muted="" autoplay="">
         <source src="videos/Dog - 77626.mp4" type="video/mp4" />
       </video>
-      <video class="video video2 section-top__video" loop="loop" muted="" autoplay="">
+      <video data-video="2" class="video section-top__video" loop="loop" muted="" autoplay="">
+        <source src="videos/Puppy - 4740.mp4" type="video/mp4" />
+      </video>
+      <video data-video="3" class="video section-top__video" loop="loop" muted="" autoplay="">
+        <source src="videos/Dog - 77626.mp4" type="video/mp4" />
+      </video>
+      <video data-video="4" class="video section-top__video" loop="loop" muted="" autoplay="">
         <source src="videos/Puppy - 4740.mp4" type="video/mp4" />
       </video>
       <header class="header">
@@ -77,28 +83,85 @@
           <div class="apartments__item apartments-options">
             <div class="apartments-options__items">
               <ul class="apartments-options__list">
-                <li class="apartments-options__list-item"><a href="" class="apartments-options__list-link">Северный
+                <li class="apartments-options__list-item"><a href="" class="apartments-options__list-link"
+                    data-link="1">Северный
                     парк</a></li>
-                <li class="apartments-options__list-item"><a href="" class="apartments-options__list-link">Станция
+                <li class="apartments-options__list-item"><a href="" class="apartments-options__list-link"
+                    data-link="2">Станция
                     Столичная</a></li>
-                <li class="apartments-options__list-item"><a href="" class="apartments-options__list-link">Лето</a></li>
-                <li class="apartments-options__list-item"><a href="" class="apartments-options__list-link">Сказочный сад
+                <li class="apartments-options__list-item"><a href="" class="apartments-options__list-link"
+                    data-link="3">Лето</a></li>
+                <li class="apartments-options__list-item"><a href="" class="apartments-options__list-link"
+                    data-link="4">Сказочный сад
                   </a></li>
-                <li class="apartments-options__list-item"><a href="" class="apartments-options__list-link">Краски</a>
+                <li class="apartments-options__list-item"><a href="" class="apartments-options__list-link"
+                    data-link="5">Краски</a>
                 </li>
-                <li class="apartments-options__list-item"><a href="" class="apartments-options__list-link">Ренесанс</a>
+                <li class="apartments-options__list-item"><a href="" class="apartments-options__list-link"
+                    data-link="6">Ренесанс</a>
                 </li>
-                <li class="apartments-options__list-item"><a href="" class="apartments-options__list-link">Компасс
+                <li class="apartments-options__list-item"><a href="" class="apartments-options__list-link"
+                    data-link="7">Компасс
                     сити</a></li>
-                <li class="apartments-options__list-item"><a href="" class="apartments-options__list-link">Бруклин</a>
+                <li class="apartments-options__list-item"><a href="" class="apartments-options__list-link"
+                    data-link="8">Бруклин</a>
                 </li>
-                <li class="apartments-options__list-item"><a href="" class="apartments-options__list-link">Монблан</a>
+                <li class="apartments-options__list-item"><a href="" class="apartments-options__list-link"
+                    data-link="9">Монблан</a>
                 </li>
               </ul>
             </div>
-            <div class="apartments-options__content">
+            <div class="apartments-options__content" data-option="1">
               <img src="images/content-img.png" alt="apartment" class="apartments-options__img">
               <h2 class="apartments-options__title">Северный парк</h2>
+              <p class="apartments-options__text">Жилой комплекс небывалого масштаба
+                с развитой инфраструктурой</p>
+            </div>
+            <div class="apartments-options__content" data-option="2">
+              <img src="images/content-img.png" alt="apartment" class="apartments-options__img">
+              <h2 class="apartments-options__title">Станция столичная</h2>
+              <p class="apartments-options__text">Жилой комплекс небывалого масштаба
+                с развитой инфраструктурой</p>
+            </div>
+            <div class="apartments-options__content" data-option="3">
+              <img src="images/content-img.png" alt="apartment" class="apartments-options__img">
+              <h2 class="apartments-options__title">Лето</h2>
+              <p class="apartments-options__text">Жилой комплекс небывалого масштаба
+                с развитой инфраструктурой</p>
+            </div>
+            <div class="apartments-options__content" data-option="4">
+              <img src="images/content-img.png" alt="apartment" class="apartments-options__img">
+              <h2 class="apartments-options__title">Сказочный сад</h2>
+              <p class="apartments-options__text">Жилой комплекс небывалого масштаба
+                с развитой инфраструктурой</p>
+            </div>
+            <div class="apartments-options__content" data-option="5">
+              <img src="images/content-img.png" alt="apartment" class="apartments-options__img">
+              <h2 class="apartments-options__title">Краски</h2>
+              <p class="apartments-options__text">Жилой комплекс небывалого масштаба
+                с развитой инфраструктурой</p>
+            </div>
+            <div class="apartments-options__content" data-option="6">
+              <img src="images/content-img.png" alt="apartment" class="apartments-options__img">
+              <h2 class="apartments-options__title">Ренесанс</h2>
+              <p class="apartments-options__text">Жилой комплекс небывалого масштаба
+                с развитой инфраструктурой</p>
+            </div>
+            <div class="apartments-options__content" data-option="7">
+              <img src="images/content-img.png" alt="apartment" class="apartments-options__img">
+              <h2 class="apartments-options__title">Компасс сити</h2>
+              <p class="apartments-options__text">Жилой комплекс небывалого масштаба
+                с развитой инфраструктурой</p>
+            </div>
+            <div class="apartments-options__content" data-option="8">
+              <img src="images/content-img.png" alt="apartment" class="apartments-options__img">
+              <h2 class="apartments-options__title">Бруклин</h2>
+              <p class="apartments-options__text">Жилой комплекс небывалого масштаба
+                с развитой инфраструктурой</p>
+            </div>
+            <div class="apartments-options__content" data-option="9">
+              <img src="images/content-img.png" alt="apartment" class="apartments-options__img">
+              <h2 class="apartments-options__title">Монблан</h2>
               <p class="apartments-options__text">Жилой комплекс небывалого масштаба
                 с развитой инфраструктурой</p>
             </div>
@@ -110,7 +173,7 @@
               <button class="apartments__slider-btn apartments__slider-btn2 active"><img src="images/arrow-right.svg"
                   alt="" class="apartments__slider-img"></button>
             </div>
-            <div class="apartments-choice__content">
+            <div class="apartments-choice__content active" data-content="1">
               <h1 class="apartments-choice__title">Стильная архитектура и виды из окон будущей квартиры не оставят
                 равнодушных</h1>
               <div class="apartments-choice__btns">
@@ -121,136 +184,164 @@
                 <a href="#" class="apartments-choice__buy-online">Купить квартиру онлайн</a>
               </div>
             </div>
-          </div>
-        </div>
-        <hr style="border: 1px solid rgba(255, 255, 255, 0.15);">
-        <div class="section-top__filters filters">
+            <div class="apartments-choice__content" data-content="2">
+              <h1 class="apartments-choice__title">Большие парковые территории и безопасные дворы созданы для счастливой
+                жизни</h1>
+              <div class="apartments-choice__btns">
+                <button class="apartments-choice__btn">
+                  Выбрать квартиру
+                </button>
 
-          <div class="container filters__content">
-            <div class="filters__rooms filters__item">
-              <h4 class="filters__title">Количество комнат</h4>
-              <div class="filters__rooms-number">
-                <label>
-                  <input class="filters__checkbox" checked type="checkbox" name="room" style="display:none" />
-                  <span class="word_opts word_opts1">cтудия</span>
-                </label>
-                <label>
-                  <input class="filters__checkbox" type="checkbox" name="room" style="display:none" />
-                  <span class="word_opts">1</span>
-                </label>
-                <label>
-                  <input class="filters__checkbox" type="checkbox" name="room" style="display:none" />
-                  <span class="word_opts">2</span>
-                </label>
-                <label>
-                  <input class="filters__checkbox" type="checkbox" name="room" style="display:none" />
-                  <span class="word_opts">3</span>
-                </label>
-                <label>
-                  <input class="filters__checkbox" type="checkbox" name="room" style="display:none" />
-                  <span class="word_opts word_opts2">4</span>
-                </label>
+                <a href="#" class="apartments-choice__buy-online">Купить квартиру онлайн</a>
               </div>
             </div>
-            <div class="filters__square filters__item">
-              <h4 class="filters__title">Площадь</h4>
-              <label class="filters__lable filters__lable1">
-                <span class="filters__span">от</span>
-                <span>
-                  <input id="filter1" class="filters__input" type="text" value="0">
-                </span><span>м<sup>2</sup></span>
-              </label>
-              <label class="filters__lable filters__lable2">
-                <span class="filters__span">до</span>
-                <span>
-                  <input id="filter2" class="filters__input" type="text" value="500">
-                </span><span>м<sup>2</sup></span>
-              </label>
-              <div id="slider-range"></div>
-            </div>
-            <div class="filters__price filters__item">
-              <h4 class="filters__title">Стоимость, млн ₽</h4>
-              <label class="filters__lable filters__lable1">
-                <span class="filters__span">от</span>
-                <span>
-                  <input id="filter3" class="filters__input filters__input-price" type="text" value="0">
-                </span>
-              </label>
-              <label class="filters__lable filters__lable2">
-                <span class="filters__span">до</span>
-                <span>
-                  <input id="filter4" class="filters__input filters__input-price" type="text" value="50">
-                </span>
-              </label>
-              <div id="slider-range2"></div>
-            </div>
-            <div class="filters__apartments filters__item">
-              <h4 class="filters__title">Жилой комплекс</h4>
+            <div class="apartments-choice__content" data-content="3">
+              <h1 class="apartments-choice__title">Стильная архитектура и виды из окон будущей квартиры не оставят
+                равнодушных</h1>
+              <div class="apartments-choice__btns">
+                <button class="apartments-choice__btn">
+                  Выбрать квартиру
+                </button>
 
-              <div class="select-box">
-
-                <div class="options-container">
-
-                  <div class="option">
-                    <input type="radio" class="radio" id="one">
-                    <label for="one">Северный парк</label>
-                  </div>
-                  <div class="option">
-                    <input type="radio" class="radio" id="two">
-                    <label for="two">Станция Столичная</label>
-                  </div>
-                  <div class="option">
-                    <input type="radio" class="radio" id="three">
-                    <label for="three">Лето</label>
-                  </div>
-                  <div class="option">
-                    <input type="radio" class="radio" id="fore">
-                    <label for="fore">Сказочный сад</label>
-                  </div>
-                  <div class="option">
-                    <input type="radio" class="radio" id="five">
-                    <label for="five">Краски</label>
-                  </div>
-                  <div class="option">
-                    <input type="radio" class="radio" id="six">
-                    <label for="six">Ренесанс</label>
-                  </div>
-                  <div class="option">
-                    <input type="radio" class="radio" id="seven">
-                    <label for="seven">Компасс сити</label>
-                  </div>
-                  <div class="option">
-                    <input type="radio" class="radio" id="eight">
-                    <label for="eight">Бруклин</label>
-                  </div>
-                  <div class="option">
-                    <input type="radio" class="radio" id="nine">
-                    <label for="nine">Монблан</label>
-                  </div>
-                </div>
-                <div class="selected">
-                  Северный парк
-                </div>
+                <a href="#" class="apartments-choice__buy-online">Купить квартиру онлайн</a>
               </div>
             </div>
-            <button class="filters__more filters__item">Еще фильтры</button>
-            <button class="filters__show filters__item">Показать 120 квартир</button>
+            <div class="apartments-choice__content" data-content="4">
+              <h1 class="apartments-choice__title">Большие парковые территории и безопасные дворы созданы для счастливой
+                жизни</h1>
+              <div class="apartments-choice__btns">
+                <button class="apartments-choice__btn">
+                  Выбрать квартиру
+                </button>
+
+                <a href="#" class="apartments-choice__buy-online">Купить квартиру онлайн</a>
+              </div>
+            </div>
           </div>
-
-
-
-
-
-
-
         </div>
 
-        <div class="apartments__search">
-          <div class="container">
-            <input placeholder="Подобрать квартиру" class="apartments__search-input" type="search">
-          </div>
+      </div>
 
+      <form action="" class="section-top__filters filters form-send">
+        <hr style="border: 1px solid rgba(255, 255, 255, 0.15); margin-bottom: 35px;">
+        <div class="container filters__content">
+          <div class="filters__rooms filters__item">
+            <h4 class="filters__title">Количество комнат</h4>
+            <div class="filters__rooms-number">
+              <label>
+                <input class="filters__checkbox" checked type="checkbox" name="room" style="display:none" />
+                <span class="word_opts">cтудия</span>
+              </label>
+              <label>
+                <input class="filters__checkbox" type="checkbox" name="room" style="display:none" />
+                <span class="word_opts">1</span>
+              </label>
+              <label>
+                <input class="filters__checkbox" type="checkbox" name="room" style="display:none" />
+                <span class="word_opts">2</span>
+              </label>
+              <label>
+                <input class="filters__checkbox" type="checkbox" name="room" style="display:none" />
+                <span class="word_opts">3</span>
+              </label>
+              <label>
+                <input class="filters__checkbox" type="checkbox" name="room" style="display:none" />
+                <span class="word_opts">4</span>
+              </label>
+            </div>
+          </div>
+          <div class="filters__square filters__item">
+            <h4 class="filters__title">Площадь</h4>
+            <label class="filters__lable filters__lable1">
+              <span class="filters__span">от</span>
+              <span>
+                <input id="filter1" class="filters__input" type="text" value="0">
+              </span><span>м<sup>2</sup></span>
+            </label>
+            <label class="filters__lable filters__lable2">
+              <span class="filters__span">до</span>
+              <span>
+                <input id="filter2" class="filters__input" type="text" value="500">
+              </span><span>м<sup>2</sup></span>
+            </label>
+            <div id="slider-range"></div>
+          </div>
+          <div class="filters__price filters__item">
+            <h4 class="filters__title">Стоимость, млн ₽</h4>
+            <label class="filters__lable filters__lable1">
+              <span class="filters__span">от</span>
+              <span>
+                <input id="filter3" class="filters__input filters__input-price" type="text" value="0">
+              </span><span style="opacity: 0;">м<sup>2</sup></span>
+            </label>
+            <label class="filters__lable filters__lable2">
+              <span class="filters__span">до</span>
+              <span>
+                <input id="filter4" class="filters__input filters__input-price" type="text" value="50">
+              </span><span style="opacity: 0;">м<sup>2</sup></span>
+            </label>
+            <div id="slider-range2"></div>
+          </div>
+          <div class="filters__apartments filters__item">
+            <h4 class="filters__title">Жилой комплекс</h4>
+
+            <div class="select-box">
+
+              <div class="options-container">
+
+                <div class="option">
+                  <input type="radio" class="radio" id="one">
+                  <label for="one">Северный парк</label>
+                </div>
+                <div class="option">
+                  <input type="radio" class="radio" id="two">
+                  <label for="two">Станция Столичная</label>
+                </div>
+                <div class="option">
+                  <input type="radio" class="radio" id="three">
+                  <label for="three">Лето</label>
+                </div>
+                <div class="option">
+                  <input type="radio" class="radio" id="fore">
+                  <label for="fore">Сказочный сад</label>
+                </div>
+                <div class="option">
+                  <input type="radio" class="radio" id="five">
+                  <label for="five">Краски</label>
+                </div>
+                <div class="option">
+                  <input type="radio" class="radio" id="six">
+                  <label for="six">Ренесанс</label>
+                </div>
+                <div class="option">
+                  <input type="radio" class="radio" id="seven">
+                  <label for="seven">Компасс сити</label>
+                </div>
+                <div class="option">
+                  <input type="radio" class="radio" id="eight">
+                  <label for="eight">Бруклин</label>
+                </div>
+                <div class="option">
+                  <input type="radio" class="radio" id="nine">
+                  <label for="nine">Монблан</label>
+                </div>
+              </div>
+              <div class="selected">
+                Северный парк
+              </div>
+            </div>
+          </div>
+          <button class="filters__more filters__item">Еще фильтры</button>
+          <button class="filters__show filters__item">Показать 120 квартир</button>
         </div>
+
+      </form>
+
+      <div class="apartments__search">
+        <div class="container">
+          <input placeholder="Подобрать квартиру" class="apartments__search-input" type="search">
+        </div>
+
       </div>
 
 
@@ -264,7 +355,7 @@
       <div class="popup__inner popup-menu__inner">
         <div class="popup__content popup-menu__content">
           <button class="btn-close popup__btn-close popup-close"></button>
-          <div class="popup-menu__logo">
+          <div class="popup-menu__logo container">
             <a href="#" class="logo"><img src="images/logo.png" alt="" class="popup-menu__logo-img"></a>
           </div>
 
