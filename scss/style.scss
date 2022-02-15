@@ -581,9 +581,11 @@
     }
     .apartments-choice {
         flex-direction: column;
+        justify-content: flex-start;
         &__content {
             margin-left: 0;
             order: 1;
+            margin-bottom: 20px;
         }
         &__title {
             font-size: 24px;
@@ -629,6 +631,9 @@
             letter-spacing: -0.02em;
             margin-bottom: 30px;
             max-width: 400px;
+        }
+        &__content {
+            margin-bottom: 10px;
         }
         &__buy-online {
             max-width: 150px;
