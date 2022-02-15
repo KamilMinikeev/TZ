@@ -126,6 +126,9 @@
         &:last-child {
             margin-left: 10px;
         }
+        img {
+            margin: auto;
+        }
     }
 }
 .apartments__slider-btn.active {
@@ -936,25 +939,5 @@
             font-size: 12px;
             line-height: 19px;
         }
-    }
-}
-@media only screen and (max-height: 550px) {
-    body {
-        display: none;
-    }
-    html:before {
-        content: "Переверните устройство в портретный режим или откройте сайт с компьютера.";
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        margin: auto;
-        background: #fff;
-        z-index: 999;
-        text-align: center;
-        width: 80%;
-        height: 100px;
-        color: #0d141f;
     }
 }
